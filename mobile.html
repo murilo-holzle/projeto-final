@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Espaço-Cerâmica | Mobile</title>
+  <link rel="stylesheet" href="mobile.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <section class="mobile-card">
+      <header class="topbar">
+        <button class="icon-btn" aria-label="Abrir menu">☰</button>
+        <a class="brand" href="#">ESPAÇO<br><span>CERÂMICA</span></a>
+        <button class="icon-btn cart-btn" onclick="toggleCart()" aria-label="Abrir carrinho">
+          🛒
+          <span id="cartCount">0</span>
+        </button>
+      </header>
+
+      <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Cerâmica artesanal</p>
+          <h1>Peças únicas para sua casa</h1>
+          <p class="subtitle">Coleção minimalista em tons naturais, feita à mão.</p>
+        </div>
+      </section>
+
+      <section class="benefit-strip" aria-label="Benefícios da loja">
+        <div><strong>PIX</strong><span>10% off</span></div>
+        <div><strong>Brasil</strong><span>envio</span></div>
+        <div><strong>Seguro</strong><span>SSL</span></div>
+      </section>
+
+      <section class="shop-area">
+        <div class="section-title">
+          <div>
+            <span>Nossa coleção</span>
+            <h2>Escolha sua peça</h2>
+          </div>
+          <button onclick="scrollProducts(1)" class="small-link">ver +</button>
+        </div>
+
+        <div class="products-row" id="productsRow"></div>
+      </section>
+
+      <section class="checkout-preview" id="checkoutPreview">
+        <div>
+          <span>Total do carrinho</span>
+          <strong id="cartTotal">R$ 0,00</strong>
+        </div>
+        <button onclick="showPix()">Pagar com Pix</button>
+      </section>
+    </section>
+
+    <aside class="cart-sheet" id="cartSheet" aria-label="Carrinho de compras">
+      <div class="sheet-handle"></div>
+      <div class="sheet-header">
+        <div>
+          <span>Carrinho</span>
+          <h2>Seu pedido</h2>
+        </div>
+        <button onclick="toggleCart()">×</button>
+      </div>
+
+      <div class="cart-items" id="cartItems"></div>
+
+      <div class="pix-panel" id="pixPanel">
+        <h3>Pagamento Pix</h3>
+        <p>Use o QR demonstrativo ou copie o código abaixo.</p>
+        <div class="fake-qr"></div>
+        <textarea id="pixCode" readonly></textarea>
+        <button onclick="copyPix()">Copiar Pix copia e cola</button>
+        <small id="copyMsg">Código copiado!</small>
+      </div>
+    </aside>
+  </main>
+
+  <script src="mobile.js"></script>
+</body>
+</html>
