@@ -1,136 +1,247 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Murilo Holzle - Currículo</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Poppins:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
-
+  <title>Espaço-Cerâmica</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <div class="container">
-    <header id="topo" class="header">
-      <div class="header__content">
-        <figure class="profile">
-          <img class="profile__img" src="img/foto-murilo.jpeg" alt="Foto de Murilo Holzle" width="150" height="150" />
-          <figcaption class="profile__caption">Foto de Murilo Holzle</figcaption>
-        </figure>
 
-        <div class="header__text">
-          <h1 class="title">Murilo Holzle</h1>
-          <p class="cargo">Auxiliar de Escritório</p>
+  <div class="top-info">
+    <div class="top-left">
+      <div class="top-item">
+        <span class="top-icon">☎</span>
+        <span>Fale pelo whatsapp</span>
+      </div>
 
-          <p class="tagline">
-            <span class="badge" title="Disponível para oportunidades">Disponível</span>
-            <span class="badge badge--soft" title="Área de interesse">TI / Contabilidade</span>
+      <div class="top-item">
+        <span class="top-icon">?</span>
+        <span>Tire suas dúvidas</span>
+      </div>
+    </div>
+
+    <div class="top-right">
+      <div class="top-item">
+        <span class="top-icon">●</span>
+        <span>Login</span>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <a href="#" class="logo">ESPAÇO-CERÂMICA</a>
+
+    <nav class="nav">
+      <a href="#">Home</a>
+      <a href="#loja">Loja</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-button" aria-label="Pesquisar">⌕</button>
+      <button class="icon-button" onclick="openCart()" aria-label="Abrir carrinho">
+        🛒
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <section class="cv-section">
+  <h2 class="section-title">Acessibilidade</h2>
+
+  <button class="btn-acess" onclick="mostrarInfo()">
+    Mostrar informações da página
+  </button>
+
+  <div id="infoAcessibilidade" style="display:none; margin-top:10px;">
+    <p>
+      Este currículo pertence a Murilo Holzle.
+      Contém informações de contato, formação acadêmica,
+      experiência profissional e habilidades.
+    </p>
+  </div>
+</section>
+
+  <main>
+    <section class="hero">
+      <div class="hero-image">
+        <div class="hero-content">
+          <h1>ESPAÇO CERÂMICA</h1>
+          <p>Cerâmica artesanal</p>
+          <a href="#loja">
+            <button class="black-button">Compre agora</button>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <article class="benefit-card">
+        <div>
+          <div class="benefit-icon">🚚</div>
+          <strong>FRETE GRÁTIS</strong>
+          <span>Confira Condições</span>
+        </div>
+      </article>
+
+      <article class="benefit-card">
+        <div>
+          <div class="benefit-icon">📍</div>
+          <strong>ENVIAMOS</strong>
+          <span>para todo Brasil</span>
+        </div>
+      </article>
+
+      <article class="benefit-card">
+        <div>
+          <div class="benefit-icon">💳</div>
+          <strong>ATÉ 12X SEM JUROS</strong>
+          <span>10% Off no Pix</span>
+        </div>
+      </article>
+
+      <article class="benefit-card">
+        <div>
+          <div class="benefit-icon">🛡</div>
+          <strong>100% SEGURO</strong>
+          <span>Certificado SSL</span>
+        </div>
+      </article>
+    </section>
+
+    <section class="collection-intro" id="sobre">
+      <div class="intro-box">
+        <div>
+          <h2>NOSSA COLEÇÃO</h2>
+          <p>
+            Peças artesanais em cerâmica para compor ambientes leves,
+            elegantes e naturais. Cada item possui pequenas variações de
+            textura, cor e acabamento, tornando cada produto único.
           </p>
         </div>
       </div>
-    </header>
+    </section>
 
-    <main>
-      <section id="contato" class="cv-section">
-        <h2 class="section-title">Contato</h2>
-        <ul class="list list--contact">
-          <li class="list__item">
-            <img class="icon" src="img/cellphone.svg" alt="Ícone celular" width="24" height="24" />
-            <span>Celular: <a href="tel:18981370102">(18) 98137-0102</a></span>
-          </li>
+    <section class="products-section" id="loja">
+      <div class="products-grid" id="productsGrid"></div>
+    </section>
 
-          <li class="list__item">
-            <img class="icon" src="img/mail.svg" alt="Ícone e-mail" width="24" height="24" />
-            <span>E-mail: <a href="mailto:muriloholzle@alunos.utfpr.edu.br">muriloholzle@alunos.utfpr.edu.br</a></span>
-          </li>
+    <section class="contact" id="contato">
+      <div>
+        <h2>ESPAÇO-CERÂMICA</h2>
 
-          <li class="list__item">
-            <img class="icon" src="img/github.svg" alt="Ícone GitHub" width="24" height="24" />
-            <span>GitHub:
-              <a href="https://github.com/murilo-holzle" target="_blank" rel="noopener noreferrer">github.com/murilo-holzle</a>
-            </span>
-          </li>
-        </ul>
-      </section>
+        <p><strong>End:</strong> Rua Bernardino de Campos, 98</p>
+        <p> Assis/São Paulo, SP CEP: 19.800-011</p>
+        <p><strong>Tel:</strong> (18) 99142-5825</p>
+        <p><strong>Email:</strong> info@maeceramica.com</p>
 
-      <section id="objetivo" class="cv-section">
-        <h2 class="section-title">Objetivo Profissional</h2>
-        <p>
-          Busco oportunidades na área de TI e escritórios de contabilidade onde já possuo experiência
-          para aplicar minhas habilidades técnicas e me desenvolver profissionalmente.
-        </p>
-      </section>
+        <br>
 
-      <section id="sobre" class="cv-section">
-        <h2 class="section-title">Sobre Mim</h2>
-        <p>
-          Comecei a trabalhar com 17 anos em um escritório de contabilidade, onde aprendi toda a rotina de um escritório contábil.
-          Estou cursando Engenharia de Software na UTFPR – Campus Cornélio Procópio e busco ingressar na área de TI para agregar
-          mais conhecimento à minha formação.
-        </p>
-      </section>
+        <p>SEG - SEX: 9:00 - 18:00</p>
+      </div>
 
-      <section id="ods" class="cv-section cv-section--highlight">
-        <h2 class="section-title">ODS que pretendo contribuir</h2>
-        <figure class="ods">
-          <img class="ods__img" src="img/ods.png" alt="ODS 4 - Educação de Qualidade" width="64" height="64" />
-          <figcaption class="ods__caption"><strong>ODS 4</strong> — Educação de Qualidade</figcaption>
-        </figure>
-      </section>
+      <form>
+        <div class="form-grid">
+          <label class="form-field">
+            Nome
+            <input type="text">
+          </label>
 
-      <section id="formacao" class="cv-section">
-        <h2 class="section-title">Formação Acadêmica</h2>
-        <ul class="list">
-          <li class="list__item">
-            <strong>Bacharelado em Engenharia de Software</strong> – 2º ano<br />
-            <small>UTFPR – Universidade Tecnológica Federal do Paraná, Campus Cornélio Procópio</small>
-          </li>
-          <li class="list__item"><strong>Técnico em Contabilidade</strong> – 2020</li>
-        </ul>
-      </section>
+          <label class="form-field">
+            Sobrenome
+            <input type="text">
+          </label>
 
-      <section id="experiencia" class="cv-section">
-        <h2 class="section-title">Experiência Profissional</h2>
+          <label class="form-field">
+            Telefone
+            <input type="tel">
+          </label>
 
-        <article class="card">
-          <h3 class="card__title">Auxiliar de Contabilidade <span class="muted">— INOVEI CONTABILIDADE</span></h3>
-          <p class="periodo"><strong>07/2020 a 03/2022</strong></p>
-          <ul class="list">
-            <li class="list__item">Responsável pela parte Fiscal e aberturas de ME e MEI</li>
-            <li class="list__item">Colaboração na área de Departamento Pessoal</li>
-            <li class="list__item">Realização de conciliação bancária</li>
-          </ul>
-        </article>
+          <label class="form-field">
+            Email *
+            <input type="email">
+          </label>
 
-        <article class="card">
-          <h3 class="card__title">Auxiliar de Escritório <span class="muted">— SUPERMERCADO SUPERBOM DE ASSIS LTDA</span></h3>
-          <p class="periodo"><strong>06/2023 a 08/2023</strong></p>
-          <ul class="list">
-            <li class="list__item">Liberação de mercadorias no sistema</li>
-            <li class="list__item">Fazer pedido de mercadorias por fornecedor</li>
-            <li class="list__item">Alteração de preços e reposição de mercadorias</li>
-          </ul>
-        </article>
-      </section>
+          <label class="form-field full">
+            Deixe-nos uma mensagem...
+            <textarea></textarea>
+          </label>
 
-      <section id="habilidades" class="cv-section">
-        <h2 class="section-title">Habilidades</h2>
-        <ul class="chips">
-          <li class="chip">Disposição para o trabalho</li>
-          <li class="chip">Aprendo rápido</li>
-          <li class="chip">Sou proativo</li>
-          <li class="chip">Gosto de resolver problemas</li>
-          <li class="chip">Disciplina e compromisso</li>
-        </ul>
-      </section>
-    </main>
+          <button type="button" class="send-button">Enviar</button>
+        </div>
+      </form>
+    </section>
+  </main>
 
-    <footer class="footer">
-      <p>© 2026 Murilo Holzle. Todos os direitos reservados.</p>
-    </footer>
+  <footer class="footer">
+    <div>
+      <p>FAQ / Envios e Devoluções /</p>
+      <p>Política de Loja /</p>
+      <p>Métodos de Pagamento</p>
+    </div>
+
+    <div>
+      <p>Espaço-</p>
+      <p>São Paulo - SP</p>
+      <p>Telefone: </p>
+      <p>Estimativa de entrega 2 - 5 dias úteis</p>
+    </div>
+
+    <div>
+      <p><strong>MÉTODOS DE PAGAMENTOS ACEITOS</strong></p>
+      <div class="payment-icons">
+        <span class="payment-badge">VISA</span>
+        <span class="payment-badge">Master</span>
+        <span class="payment-badge">Pix</span>
+        <span class="payment-badge">PayPal</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="social-fixed">
+    <span>f</span>
+    <span>◎</span>
+    <span>𝕏</span>
+    <span>p</span>
   </div>
+
+  <button class="chat-button" aria-label="Abrir chat">●</button>
+
+  <div class="overlay" id="overlay" onclick="closeCart()"></div>
+
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h2>CARRINHO</h2>
+      <button class="close-cart" onclick="closeCart()">×</button>
+    </div>
+
+    <div class="cart-items" id="cartItems"></div>
+
+    <div class="cart-footer">
+      <div class="total-line">
+        <span>Total</span>
+        <strong id="cartTotal">R$ 0,00</strong>
+      </div>
+
+      <button class="checkout" onclick="showPix()">Finalizar com Pix</button>
+
+      <div class="pix-box" id="pixBox">
+        <h3>PAGAMENTO PIX</h3>
+        <p>Escaneie o QR Code ou copie o código Pix abaixo.</p>
+
+        <div class="fake-qr"></div>
+
+        <textarea class="pix-code" id="pixCode" readonly></textarea>
+
+        <button class="copy-pix" onclick="copyPix()">Copiar Pix copia e cola</button>
+
+        <p class="copy-feedback" id="copyFeedback">Código Pix copiado!</p>
+      </div>
+    </div>
+  </aside>
+
+  <script src="script.js"></script>
 </body>
 </html>
